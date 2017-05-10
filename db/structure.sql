@@ -3204,10 +3204,10 @@ CREATE TABLE users (
     comment_threshold integer DEFAULT '-1'::integer NOT NULL,
     default_image_size character varying DEFAULT 'large'::character varying NOT NULL,
     favorite_tags text,
-    blacklisted_tags text DEFAULT 'spoilers
+    blacklisted_tags text DEFAULT '
 guro
 scat
-furry -rating:s'::text,
+'::text,
     time_zone character varying DEFAULT 'Eastern Time (US & Canada)'::character varying NOT NULL,
     bcrypt_password_hash text,
     per_page integer DEFAULT 20 NOT NULL,
