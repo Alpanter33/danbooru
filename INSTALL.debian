@@ -101,6 +101,14 @@ passwd danbooru
 echo "* Setting up SSH keys for the danbooru account"
 sudo -u danbooru ssh-keygen
 
+echo "* Setting up danbooru app..."
+sudo -u danbooru git clone https://github.com/Alpanter33/danbooru ~danbooru/danbooru
+sudo -u danbooru bash -l -c 'cd ~/danbooru ; bundle'
+
+echo "* Creating a new local git branch called develop"
+sudo -u danbooru bash -l -c 'cd ~/danbooru ; git checkout -b develop'
+
+
 mkdir -p /var/www/danbooru2/shared/config
 mkdir -p /var/www/danbooru2/shared/data
 mkdir -p /var/www/danbooru2/shared/data/preview
